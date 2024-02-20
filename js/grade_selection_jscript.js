@@ -60,12 +60,12 @@ addCourse("COU3304", "Fundamentals of Programming", 3, 3, 1);
 addCourse("ADU3330", "Discrete Mathematics I", 3, 3, 1);
 
 // Level 3 Semester 2 Courses - 6
-addCourse("COU3201", "Web Development", 2, 3, 2);
 addCourse("COU3303", "Software Engineering", 3, 3, 2);
 addCourse("COU3305", "Computer Security Concept", 3, 3, 2);
 addCourse("COU3306", "Data Structures and Algorithm", 3, 3, 2);
 addCourse("ISU3300", "Fundamentals of Information System", 3, 3, 2);
 addCourse("ISU3201", "IT Organization", 2, 3, 2);
+addCourse("ITU3201", "Web Development", 2, 3, 2);
 
 // Level 4 Semester 1 Courses - 6
 addCourse("COU4300", "Object Oriented Programming", 3, 4, 1 );
