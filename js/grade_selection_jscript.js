@@ -256,7 +256,7 @@ let ResetBtnEl = document.getElementById("reset-button");
 
 ResetBtnEl.addEventListener("click", function(){
     gradeSelectionBtns.forEach(function(btn){
-        btn.querySelector("span").textContent = "grade ⏷";
+        btn.querySelector("span").textContent = "grade 🥇";
         btn.classList.remove("grade-selected-A");
         btn.classList.remove("grade-selected-B");
         btn.classList.remove("grade-selected-C");
