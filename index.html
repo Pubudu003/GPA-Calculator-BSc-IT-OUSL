@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <title>GPA CALCULATOR</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="shortcut icon" type="image/x-icon" href="other/tab-ico.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Gowun+Dodum&family=Varela+Round&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/gpa_page.css">
+        <link rel="stylesheet" href="css/display.css">
+        <link rel="stylesheet" href="css/course_table_main.css">
+        <link rel="stylesheet" href="css/grade_selection.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div id="main-container">
+            <div id="header">
+                <div id="logo-container">
+                    <div id="logo"></div>
+                    <div id="page-name">GPA CALCULATOR</div>
+                </div>
+                <div id="navbar-container">
+                    <div id="navbar">
+                        <ul id="nav-bar">
+                            <li id="home" class="inWork active-tab"><span>HOME</span></li>
+                            <li id="gpa" class="inWork"><span>GPA?</span></li>
+                            <li id="ousl">
+                                <span>OUSL &#x25BC;</span>
+                                <ul class="drop-menu">
+                                    <li id="ousl-web"><a href="https://ou.ac.lk/" target="_blank"><span>OUSL website</span></a></li>
+                                    <li id="nat-fac"><a href="https://ou.ac.lk/nsc/department-of-computer-science/" target="_blank"><span>Department of Computer Scienece</span></a></li>
+                                </ul>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="home-page" class="content-container">
+                <div id="course-table-container">
+                <!-- **************************************************** -->  
+                    <div id="course-area-container">
+                        <!-- Level Buttons -->
+                        <div id="level3-button" class="level-buttons clicked" >
+                            <span>LEVEL 3</span>
+                        </div>
+                        <div id="level4-button" class="level-buttons">
+                            <span>LEVEL 4</span>
+                        </div>
+                        <div id="level5-button" class="level-buttons">
+                            <span>LEVEL 5</span>
+                        </div>
+                        <div id="level6-button" class="level-buttons">
+                            <span>LEVEL 6</span>
+                        </div>
+
+                        <!-- Course container -->
+                        <div id="main-course-container">    
+                            <!-- Level 03 Courses -->
+                            <div id="level3-container" class="level-containers">
+                                <!-- Semester 01 -->
+                                <div class="semester-heading">
+                                    <span>SEMESTER 1</span>
+                                </div>
+                                <div id="level3-sem1-container" class="semester-containers">
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div> 
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                <!-- <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div> -->
+
+                                </div>
+
+                                <!-- Semester 02 -->
+                                <div class="semester-heading">
+                                    <span>SEMESTER 2</span>
+                                </div>
+                                <div id="level3-sem2-container" class="semester-containers">
+
+                                    <div class="course-container" >
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div> 
+
+                                    <div class="course-container" >
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Level 04 Courses -->
+                            <div id="level4-container" class="level-containers">
+                                <!-- Semester 01 -->
+                                <div class="semester-heading">
+                                    <span>SEMESTER 1</span>
+                                </div>
+                                <div id="level4-sem1-container" class="semester-containers">
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div> 
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+                                
+                                </div>
+
+                                <!-- Semester 02 -->
+                                <div class="semester-heading">
+                                    <span>SEMESTER 2</span>
+                                </div>
+                                <div id="level4-sem2-container" class="semester-containers">
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div> 
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Level 05 Courses -->
+                            <div id="level5-container" class="level-containers">
+                                <!-- Semester 01 -->
+                                <div class="semester-heading">
+                                    <span>SEMESTER 1</span>
+                                </div>
+                                <div id="level5-sem1-container" class="semester-containers">
+
+                                    <div class="course-container" >
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+            
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div> 
+
+                                    <div class="course-container" >
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+            
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container" >
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+            
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+                                
+                                </div>
+
+                                <!-- Semester 02 -->
+                                <div class="semester-heading">
+                                    <span>SEMESTER 2</span>
+                                </div>
+                                <div id="level5-sem2-container" class="semester-containers">
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div> 
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Level 06 Courses -->
+                            <div id="level6-container" class="level-containers">
+                                <!-- Semester 01 -->
+                                <div class="semester-heading">
+                                    <span>SEMESTER 1</span>
+                                </div>
+                                <div id="level6-sem1-container" class="semester-containers">
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div> 
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                <!-- <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div> -->
+                                
+                                </div>
+
+                                <!-- Semester 02 -->
+                                <div class="semester-heading">
+                                    <span>SEMESTER 2</span>
+                                </div>
+                                <div id="level6-sem2-container" class="semester-containers">
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div> 
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                    <div class="course-container">
+                                        <div class="course-details">
+                                            <div class="course-id">
+                                                <span>ID</span>
+                                            </div>
+                                            <div class="credit-val">
+                                                <span class="value">0</span><span> Credit</span>
+                                            </div>
+                                            <div class="course-name">
+                                                <span>COURSE NAME</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <div class="grade-selection-btn">
+                                                <span>grade ⏷</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade-list-container">
+                                        <div class="empty-container"></div>
+                                        <div class="list-container">
+                                            <ul class="grade-list hidden">
+                                            </ul>
+                                        </div>  
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="reset-btn-container">
+                                <button id="reset-button">RESET GRADES TO DEFAULT</button>
+                            </div>
+                        </div>
+                    </div>
+                <!-- **************************************************** -->    
+                </div>
+                <div id="gpa-display-container">
+                    <div id="display-container">
+                        <div id="gpa-container">
+                            <span id="gpaVal" class="values">0.00</span>
+                            <span class="sub-text">GPA</span>
+                        </div>
+                        <div id="total-credit-container">
+                            <span id="totCredit" class="values">00</span>
+                            <span class="sub-text">Credits</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="gpa-page" class="content-container">
+                <div id="page-container">
+                    <div id="intro-to-app">
+                        <h2>What is GPA Calculator?</h2>
+                        <p>This GPA Calculator is built for calculate the GPA value of the students who pursuing a 
+                            BSc IT degree in Open University of Sri Lanka.</p>
+                    </div>
+                    <div id="intro-to-gpa">
+                        <h2>What is GPA?</h2>
+                        <p>GPA is an abbreviation for <b>Grade Point Average</b>, which represents the credit-weighted arithmetic 
+                            mean of the Grade Point Values obtained by a student for a total of 90 credits in the BSc in IT degree program. 
+                            The GPA will be calculated to the second decimal point, with a maximum value of 4.00, as illustrated below. 
+                            The GPA will determine the passes and classes awarded for the BSc degree.
+                        </p>
+                        <div id="gpa-cal-img" >
+                            <img src="other/gpa calculation.PNG" alt="how to calculate gpa">
+                        </div>
+                        
+                        <p>c<sub>i</sub> is the credit rating of the course, <br>g<sub>i</sub> is the GPV of the 
+                            student has been obtained for the i<sup>th</sup> course.
+                    </div>
+                    <div id="intro-to-gpv">
+                        <h2>Overall Grade and GPV</h2>
+                        <p>For each course, an overall Grade and GPV(Grade point Value) will be awarded as shown below.</p>
+                        <div id="gpv-table">
+                            <table>
+                                <tr>
+                                    <th>Range of Marks</th>
+                                    <th>Overall Grade</th>
+                                    <th>Grade Point Value</th>
+                                </tr>
+                                <tr>
+                                    <td>85-100</td>
+                                    <td>A+</td>
+                                    <td>4.00</td>
+                                </tr>
+                                <tr>
+                                    <td>70-84</td>
+                                    <td>A </td>
+                                    <td>4.00</td>
+                                </tr>
+                                <tr>
+                                    <td>65-69</td>
+                                    <td>A-</td>
+                                    <td>3.70</td>
+                                </tr>
+                                <tr>
+                                    <td>60-64</td>
+                                    <td>B+</td>
+                                    <td>3.30</td>
+                                </tr>
+                                <tr>
+                                    <td>55-59</td>
+                                    <td>B</td>
+                                    <td>3.00</td>
+                                </tr>
+                                <tr>
+                                    <td>50-54</td>
+                                    <td>B-</td>
+                                    <td>2.70</td>
+                                </tr>
+                                <tr>
+                                    <td>45-49</td>
+                                    <td>C+</td>
+                                    <td>2.30</td>
+                                </tr>
+                                <tr>
+                                    <td>40-44</td>
+                                    <td>C</td>
+                                    <td>2.00</td>
+                                </tr>
+                                <tr>
+                                    <td>35-39</td>
+                                    <td>C-</td>
+                                    <td>1.70</td>
+                                </tr>
+                                <tr>
+                                    <td>30-34</td>
+                                    <td>D+</td>
+                                    <td>1.30</td>
+                                </tr>
+                                <tr>
+                                    <td>20-29</td>
+                                    <td>D</td>
+                                    <td>1.00</td>
+                                </tr>
+                                <tr>
+                                    <td>00-19</td>
+                                    <td>E</td>
+                                    <td>0.00</td>
+                                </tr>
+                            </table> 
+                        </div>
+                        <p id="reference-text"><i>*referenced from the BSc(IT) Undergraduate GuideBook 2023-2024.</i></p> 
+                        <a id="guideBook-link" href="https://ou.ac.lk/nsc/programme/bscit/" target="_blank"><div id="guideBook-btn">Download the Guidebook</div></a>
+                    </div>
+
+                </div>
+            </div>
+            <div id="footer">
+                <div id="copyrights-container">
+                    <span>Copyright © Pubudu Lakshan </br>(pubuduakshan04@gmail.com)</span>
+                    <span>All rights reserved</span>               
+                    <span>BSc Hons (IT) - 2021/22</span>
+                    <span>Open University of Sri Lanka</span>          
+                    <span>GPA Calculator for BSc IT</span>
+                    <span>v1.0 - since 2024</span>
+                </div>
+                <div id="social-links-container">
+                    <a href="https://www.linkedin.com/in/pubudu-lakshan-11499114b/" target="_blank"><div id="linkedIn" title="https://www.linkedin.com/in/pubudu-lakshan-11499114b/"></div></a>
+                    <a href="https://github.com/Pubudu003" target="_blank"><div id="gitHub" title="https://github.com/Pubudu003"></div></a>
+                </div>
+            </div>
+            <a class="icon-credits" href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Ruslan Babkin - Flaticon</a>
+            <a class="icon-credits" href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by riajulislam - Flaticon</a>
+        </div>
+    
+    <script src="js/level_navigation.js"></script>
+    <script src="js/grade_selection_jscript.js"></script>
+    <script src="js/main.js"></script>
+    </body>
+</html>

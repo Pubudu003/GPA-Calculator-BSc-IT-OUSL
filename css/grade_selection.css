@@ -1,0 +1,367 @@
+/* Grade colors
+    A : #30f54a
+    B : #bce745
+    C : #f0e243
+  D,E : #f53737 */
+
+/* Theme colors
+    Dark Blue : #006B8F
+    Ligth Blue : #00B8F5
+    White : #EBEBEB
+    Black : #171A21   */
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main {
+    width: 400px;
+    height: 100%;
+    background-color: antiquewhite;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-container {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-around;*/
+    align-items:center;
+    height: 50px;
+    width: 100%;
+    box-shadow: 0px 0px 3px lightgray;
+    font-size: 18px;
+    margin-bottom: 2px;
+    transition: 0.3s;
+}
+
+
+
+.semester-heading {
+    width: 100%;
+    background-color: #006B8F;
+    margin-top: 20px;
+    color: #ebebeb;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.semester-containers {
+    width: 100%;
+}
+
+.course-id {
+    width: 15%;
+    min-width: 60px;
+
+    text-align: center;
+    margin: 5px;
+    padding: 0 5px 0 5px;
+}
+
+.credit-val {
+    width: 15%;
+
+    text-align: center;
+    margin: 5px;
+    padding: 0 5px 0 5px;
+    display: none;
+}
+
+.course-name {
+    width: 70%;
+
+    text-align: center;
+    margin: 5px;
+    padding: 0 5px 0 5px;
+}
+
+.grade-selection-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 100px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+
+    text-align: center;
+    font-size: 18px;
+    margin: 5px;
+    padding: 0 5px 0 5px;
+}
+
+.grade-selection-btn span {
+    padding: 5px;
+
+}
+
+.grade-selection-btn:hover {
+    box-shadow: 0px 0px 8px grey;
+    box-sizing: border-box;
+    color: #006B8F;
+    font-weight: 600;
+}
+
+.grade-selection-btn:active {
+    box-shadow: 0px 0px 2px grey;
+}
+
+.active{
+    background-color: #25272b;
+    color: #ebebeb;
+}
+
+/* Setting colors for selected grades as per the grade */
+/* Grade colors
+    A : #30f54a
+    B : #bce745
+    C : #f0e243
+  D,E : #f53737 */
+
+.grade-selected-A {
+    background-color: #30f54a;
+    color: #171A21;
+    font-weight: 600;
+}
+
+.grade-selected-A:hover, .grade-selected-B:hover, .grade-selected-C:hover, .grade-selected-DE:hover {
+    color: #171A21;
+}
+
+.grade-selected-B {
+    background-color: #bce745;
+    color: #171A21;
+    font-weight: 600;
+}
+
+.grade-selected-C {
+    background-color: #f0e243;
+    color: #171A21;
+    font-weight: 600;
+}
+
+.grade-selected-DE {
+    background-color: #f53737;
+    color: #171A21;
+    font-weight: 600;
+}
+
+.grade-list {
+    
+    z-index: 2;
+    list-style: none;
+    width: 100px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.grade-list > li {
+    background-color: #ebebeb;
+    border-radius: 3px;
+    box-shadow: 3px 3px 8px rgb(70, 69, 69);
+    cursor: pointer;
+    padding: 5px 0px;
+    margin-bottom: 3px;
+    position: relative;
+    bottom: 140px; 
+    right: 55px; 
+    z-index: 1;
+    transition: color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.grade-list > li > span {
+    margin-right: auto;
+    margin-left: 45px;
+}
+
+.grade-list > li:hover {
+    border: 2px solid #00B8F5;
+    box-shadow: 3px 3px 12px #006B8F;
+    color: #006B8F;
+    font-weight: 600;
+    transform: scale(1.15);
+    z-index: 2;
+}
+
+.grade-list-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.empty-container {
+    width: 79%;
+}
+
+.hidden {
+    display: none;
+}
+
+#reset-btn-container{
+    position: relative;
+    bottom: 48px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* ***************************** */
+
+/* reset button */
+#reset-button {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #f87070 0, #fa2222 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(63, 1, 1, 0.4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+#reset-button:focus {
+  box-shadow: #cc0202 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+#reset-button:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #e03c60 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+#reset-button:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.course-details {
+    
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+/* ************************************************* */
+/*#course-area-container {
+    border: 1px solid black;  
+}
+
+#main-course-container {
+    border: 1px dashed black; 
+}
+
+.level-containers {
+    border: 1px solid red;
+}
+
+.semester-containers {
+    border: 1px dashed purple;
+}
+
+.course-container {
+    border: 1px dotted green;
+} 
+
+.course-container div {
+    border: 1px dashed red;
+} */
+
+/* ************************************************ */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Tablet styles here */
+    body {
+        background-color: #3c4fe0;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    /* Mobile styles here */
+    body {
+        background-color: #00B8F5;
+    }
+
+    .course-container {
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding: 7px 5px;
+        height: 90px;
+        box-shadow: 0px 0px 5px rgb(156, 156, 156);
+        margin-bottom: 5px !important;
+        font-size: 16px !important;
+    }
+
+    .btn-area {
+        width: 90%; 
+    }
+
+    .grade-selection-btn {
+
+        box-shadow: 0px 0px 2px grey;
+        width: 100%;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+
+        text-align: center;
+        font-size: 16px;
+        margin: 0; 
+        margin-top: 5px; 
+        padding: 0 0 0 0;
+    }
+
+    #course-area-container, #main-course-container, .level-containers, .course-container{
+        margin: 1px;
+        padding: 2px;
+    }
+
+    .semester-heading {
+        font-size: 18px;
+    }
+
+    #reset-button {
+        font-size: 16px;
+    }
+
+}
+
+@media only screen and (max-width: 555px) {
+    .course-container {
+        font-size: 14px !important;
+    }
+
+    
+
+}

@@ -1,0 +1,113 @@
+/* >= 3.7  green    #30f54a
+   >= 3.3  light green #8cf77e
+   >= 3.0  yelow green #c1f85b
+   >= 2.0  orange   #f8c15b
+   <  2.0  red      #f53737
+*/
+
+#gpa-display-container {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 600;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#display-container {
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#gpa-container, #total-credit-container  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: whitesmoke;
+    color: #2e2f31;
+    border-radius: 3px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 1px;
+    overflow: hidden;
+}
+
+#gpa-container {
+    font-size: 40px;
+    width: 160px;    
+}
+
+#total-credit-container {
+    font-size: 30px;
+    width: 120px;
+}
+
+.sub-text {
+    background-color: lightgray;
+    width: 100%;
+    text-align: center;
+}
+
+.values {
+    margin: 5px;
+}
+
+
+
+/*************************************************/
+
+@media only screen and (max-width: 767px) {
+
+    #display-container {
+        transform: scale(0.5);
+        bottom: 0px;
+        right: -25px;
+        /*background-color: black;
+        border-radius: 8px;
+        padding: 5px;*/
+        opacity: 1;
+    }
+
+    #gpa-display-container {
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+
+    #gpa-container, #total-credit-container {
+        border: 5px solid rgb(128, 2, 2);
+    }
+
+    #gpa-container {
+        font-size: 40px;
+        border-radius: 50px;
+        width: 140px;
+        font-weight: 700;
+    }
+
+    #gpa-container .sub-text {
+        width: 135px;
+        padding: 3px;
+        
+    }
+    
+    #total-credit-container {
+        border-radius: 30px;
+        font-size: 30px;
+        margin: 0px 0px;
+        padding: 0px 0px;
+        width: 120px;
+        font-weight: 700;
+        
+    }
+
+    
+
+}
