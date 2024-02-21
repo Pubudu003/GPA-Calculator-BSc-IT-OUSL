@@ -222,6 +222,17 @@ gradeSelectionBtns.forEach(function(btn, index){
             gradeLists[index].classList.toggle("hidden");
         } else {
             gradeLists[index].classList.toggle("hidden");
+            /* !!!!!!!!!!!!!!!!!!!!!!!!!!! */
+            calTotCreditForEachGrade(defaultGrade, defaultCredit, index);
+            calGPA();
+            
+
+            gradeSelectionBtns[index].querySelector("span").textContent = "grade 🥇";
+            gradeSelectionBtns[index].classList.remove("grade-selected-A");
+            gradeSelectionBtns[index].classList.remove("grade-selected-B");
+            gradeSelectionBtns[index].classList.remove("grade-selected-C");
+            gradeSelectionBtns[index].classList.remove("grade-selected-DE");
+            gradeSelectionBtns[index].classList.remove("active");
         } 
     });
 });
@@ -304,11 +315,15 @@ function setGpaAndCreditColor(gpa, totCredit){
         gpaSubTextEl.style.backgroundColor = "#c1f85b";
     } else if(gpa >= 2.0) {
         gpaSubTextEl.style.backgroundColor = "#f8c15b";
-    } else if(gpa < 2.0) {
+    } else if(gpa > 0.0) {
         gpaSubTextEl.style.backgroundColor = "#f53737";
+    }else {
+        gpaSubTextEl.style.backgroundColor = "lightgray";
     }
 
-    if(totCredit < 30){
+    if(totCredit === 0){
+        totCreditSubTextEl.style.backgroundColor = "lightgray";
+    } else if(totCredit < 30){
         totCreditSubTextEl.style.backgroundColor = "#f8c15b";
     } else if(totCredit < 60){
         totCreditSubTextEl.style.backgroundColor = "#c1f85b";
@@ -345,6 +360,7 @@ function calGPA(){
     let E_GPV = 0;
     let totalGPV = 0;
     let totalCredits = 0;
+    let finalGPA = 0;
     gradeArray.forEach(function(grade, index){
         switch(grade){
             case "A+" : 
@@ -399,7 +415,12 @@ function calGPA(){
         }
     });
     totalGPV = (A_PlusGPV + A_GPV + A_MinusGPV + B_PlusGPV + B_GPV + B_MinusGPV + C_PlusGPV + C_GPV + C_MinusGPV + D_PlusGPV + D_GPV + E_GPV).toFixed(3);
-    const finalGPA = (totalGPV / totalCredits).toFixed(2);
+    
+    if(totalCredits === 0){
+        finalGPA = "0.00";
+    } else{
+        finalGPA = (totalGPV / totalCredits).toFixed(2);
+    }
     
     gpaValEl.textContent = finalGPA;
     totCreditEl.textContent = totalCredits;
