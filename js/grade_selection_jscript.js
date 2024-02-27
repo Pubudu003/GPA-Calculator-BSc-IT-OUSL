@@ -318,7 +318,11 @@ function setGpaAndCreditColor(gpa, totCredit){
     } else if(gpa > 0.0) {
         gpaSubTextEl.style.backgroundColor = "#f53737";
     }else {
-        gpaSubTextEl.style.backgroundColor = "lightgray";
+        if(totCredit > 0){
+            gpaSubTextEl.style.backgroundColor = "#f53737";
+        }else {
+            gpaSubTextEl.style.backgroundColor = "lightgray";
+        }  
     }
 
     if(totCredit === 0){
