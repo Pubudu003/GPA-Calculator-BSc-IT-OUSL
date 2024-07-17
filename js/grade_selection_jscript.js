@@ -1,16 +1,13 @@
-let courseContainers = document.querySelectorAll(".course-container");
-let gradeSelectionBtns = document.querySelectorAll(".grade-selection-btn");
-let gradeLists = document.querySelectorAll(".grade-list");
 
 let grades = ["A+", "A", "A-", "B+" , "B", "B-", "C+", "C", "C-", "D+", "D", "E"]
-let level3_semester1 = [];
-let level3_semester2 = [];
-let level4_semester1 = [];
-let level4_semester2 = [];
-let level5_semester1 = [];
-let level5_semester2 = [];
-let level6_semester1 = [];
-let level6_semester2 = [];
+import {level3_semester1, 
+        level3_semester2,
+        level4_semester1,
+        level4_semester2,
+        level5_semester1,
+        level5_semester2,
+        level6_semester1,
+        level6_semester2  } from './course_container.js';
 
 /* Create Course class */
 class Course {
@@ -117,320 +114,332 @@ addCourse("ISU6302", "Social Media and Global Computing", 3, 6, 2);
 addCourse("ISU6305", "IT Project Management", 3, 6, 2);
 // Total courses = 48
 
-let l3s1CourseContainer = document.querySelectorAll("#level3-sem1-container .course-container");
-let l3s2CourseContainer = document.querySelectorAll("#level3-sem2-container .course-container");
-let l4s1CourseContainer = document.querySelectorAll("#level4-sem1-container .course-container");
-let l4s2CourseContainer = document.querySelectorAll("#level4-sem2-container .course-container");
-let l5s1CourseContainer = document.querySelectorAll("#level5-sem1-container .course-container");
-let l5s2CourseContainer = document.querySelectorAll("#level5-sem2-container .course-container");
-let l6s1CourseContainer = document.querySelectorAll("#level6-sem1-container .course-container");
-let l6s2CourseContainer = document.querySelectorAll("#level6-sem2-container .course-container");
+document.addEventListener('courseCreated', function(){
 
-/* Display courses in the containers from the lists */
-function displayCourses(courseArr, container){
-    let containerDiffer = courseArr.length - container.length;
-    if(containerDiffer === 0){
-        courseArr.forEach(function(course, index){
-            container[index].querySelector(".course-id span").textContent = course.id;
-            container[index].querySelector(".course-name span").textContent = course.name;
-            container[index].querySelector(".credit-val span").textContent = course.creditVal;
-        });
-    }else if(containerDiffer > 0){
-        console.log("Need " + containerDiffer + " more course container areas");
-        console.log("for " + container + " container.");
-
-        /*courseArr.forEach(function(course, index){
-            container[index].querySelector(".course-id span").textContent = course.id;
-            container[index].querySelector(".course-name span").textContent = course.name;
-        });*/
-    }else if(containerDiffer < 0){
-        let exceededContainers = 0 - containerDiffer;
-        console.log("Something wrong! " + exceededContainers + " empty containers are in..");
-        console.log(container + " container.");
+    let courseContainers = document.querySelectorAll(".course-container");
+    let gradeSelectionBtns = document.querySelectorAll(".grade-selection-btn");
+    let gradeLists = document.querySelectorAll(".grade-list");
+    
+    let l3s1CourseContainer = document.querySelectorAll("#level3-sem1-container .course-container");
+    let l3s2CourseContainer = document.querySelectorAll("#level3-sem2-container .course-container");
+    let l4s1CourseContainer = document.querySelectorAll("#level4-sem1-container .course-container");
+    let l4s2CourseContainer = document.querySelectorAll("#level4-sem2-container .course-container");
+    let l5s1CourseContainer = document.querySelectorAll("#level5-sem1-container .course-container");
+    let l5s2CourseContainer = document.querySelectorAll("#level5-sem2-container .course-container");
+    let l6s1CourseContainer = document.querySelectorAll("#level6-sem1-container .course-container");
+    let l6s2CourseContainer = document.querySelectorAll("#level6-sem2-container .course-container");
+    
+    /* Display courses in the containers from the lists */
+    function displayCourses(courseArr, container){
+        let containerDiffer = courseArr.length - container.length;
+        if(containerDiffer === 0){
+            courseArr.forEach(function(course, index){
+                container[index].querySelector(".course-id span").textContent = course.id;
+                container[index].querySelector(".course-name span").textContent = course.name;
+                container[index].querySelector(".credit-val span").textContent = course.creditVal;
+            });
+        }else if(containerDiffer > 0){
+            console.log("Need " + containerDiffer + " more course container areas");
+            console.log("for " + container + " container.");
+    
+            /*courseArr.forEach(function(course, index){
+                container[index].querySelector(".course-id span").textContent = course.id;
+                container[index].querySelector(".course-name span").textContent = course.name;
+            });*/
+        }else if(containerDiffer < 0){
+            let exceededContainers = 0 - containerDiffer;
+            console.log("Something wrong! " + exceededContainers + " empty containers are in..");
+            console.log(container + " container.");
+        }
     }
-}
-
-displayCourses(level3_semester1, l3s1CourseContainer);
-displayCourses(level3_semester2, l3s2CourseContainer);
-displayCourses(level4_semester1, l4s1CourseContainer);
-displayCourses(level4_semester2, l4s2CourseContainer);
-displayCourses(level5_semester1, l5s1CourseContainer);
-displayCourses(level5_semester2, l5s2CourseContainer);
-displayCourses(level6_semester1, l6s1CourseContainer);
-displayCourses(level6_semester2, l6s2CourseContainer);
-   
-
-function hideAllDropMenus(){
+    
+    displayCourses(level3_semester1, l3s1CourseContainer);
+    displayCourses(level3_semester2, l3s2CourseContainer);
+    displayCourses(level4_semester1, l4s1CourseContainer);
+    displayCourses(level4_semester2, l4s2CourseContainer);
+    displayCourses(level5_semester1, l5s1CourseContainer);
+    displayCourses(level5_semester2, l5s2CourseContainer);
+    displayCourses(level6_semester1, l6s1CourseContainer);
+    displayCourses(level6_semester2, l6s2CourseContainer);
+       
+    
+    function hideAllDropMenus(){
+        gradeLists.forEach(function(item){
+            item.classList.add("hidden");
+        });
+    }
+     /* Reset selected button colors */
+    function resetColor(gradeBtn){
+        gradeBtn.classList.remove("grade-selected-A");
+        gradeBtn.classList.remove("grade-selected-B");
+        gradeBtn.classList.remove("grade-selected-C");
+        gradeBtn.classList.remove("grade-selected-DE");
+    }
+    
+    function resetActive(){
+        gradeSelectionBtns.forEach(function(btn){
+            btn.classList.remove("active");   
+        });
+    }
+    
+    /* Set colors for selected grades */
+    function setColorForSelectedGrade(gradeBtn, gradeText){
+        resetColor(gradeBtn);
+        if(gradeText === "A+" || gradeText === "A" || gradeText === "A-"){
+            gradeBtn.classList.add("grade-selected-A");
+        }else if(gradeText === "B+" || gradeText === "B" || gradeText === "B-"){
+            gradeBtn.classList.add("grade-selected-B");
+        }else if(gradeText === "C+" || gradeText === "C" || gradeText === "C-"){
+            gradeBtn.classList.add("grade-selected-C");
+        }else if(gradeText === "D+" || gradeText === "D" || gradeText === "E"){
+            gradeBtn.classList.add("grade-selected-DE");
+        }
+    }
+    
+    
+    /* add grades to dropdown menu */
     gradeLists.forEach(function(item){
-        item.classList.add("hidden");
-    });
-}
- /* Reset selected button colors */
-function resetColor(gradeBtn){
-    gradeBtn.classList.remove("grade-selected-A");
-    gradeBtn.classList.remove("grade-selected-B");
-    gradeBtn.classList.remove("grade-selected-C");
-    gradeBtn.classList.remove("grade-selected-DE");
-}
-
-function resetActive(){
-    gradeSelectionBtns.forEach(function(btn){
-        btn.classList.remove("active");   
-    });
-}
-
-/* Set colors for selected grades */
-function setColorForSelectedGrade(gradeBtn, gradeText){
-    resetColor(gradeBtn);
-    if(gradeText === "A+" || gradeText === "A" || gradeText === "A-"){
-        gradeBtn.classList.add("grade-selected-A");
-    }else if(gradeText === "B+" || gradeText === "B" || gradeText === "B-"){
-        gradeBtn.classList.add("grade-selected-B");
-    }else if(gradeText === "C+" || gradeText === "C" || gradeText === "C-"){
-        gradeBtn.classList.add("grade-selected-C");
-    }else if(gradeText === "D+" || gradeText === "D" || gradeText === "E"){
-        gradeBtn.classList.add("grade-selected-DE");
-    }
-}
-
-
-/* add grades to dropdown menu */
-gradeLists.forEach(function(item){
-    grades.forEach(function(grade){
-        let gradeEl = document.createElement("li");
-        let spanEl = document.createElement("span");
-        spanEl.textContent = grade;
-        gradeEl.appendChild(spanEl);
-        item.appendChild(gradeEl);
-    });
-});
-
-/* toggle dropdown menu when click the button */
-gradeSelectionBtns.forEach(function(btn, index){
-    btn.addEventListener("click", function(){
-
-        if(btn.classList.contains("active")){
-            btn.classList.toggle("active");
-        }
-        else {
-            resetActive();
-            btn.classList.toggle("active");
-        }
-
-        if(gradeLists[index].classList.contains("hidden")){
-            hideAllDropMenus();
-            gradeLists[index].classList.toggle("hidden");
-        } else {
-            gradeLists[index].classList.toggle("hidden");
-            /* !!!!!!!!!!!!!!!!!!!!!!!!!!! */
-            calTotCreditForEachGrade(defaultGrade, defaultCredit, index);
-            calGPA();
-            
-
-            gradeSelectionBtns[index].querySelector("span").textContent = "grade 🥇";
-            gradeSelectionBtns[index].classList.remove("grade-selected-A");
-            gradeSelectionBtns[index].classList.remove("grade-selected-B");
-            gradeSelectionBtns[index].classList.remove("grade-selected-C");
-            gradeSelectionBtns[index].classList.remove("grade-selected-DE");
-            gradeSelectionBtns[index].classList.remove("active");
-        } 
-    });
-});
-
-let creditValues = document.querySelectorAll(".credit-val .value");
-
-/* display selected grade in dropdown menu text */
-gradeLists.forEach(function(item, index){
-    let gradeBtns = item.querySelectorAll(".grade-list li");
-    gradeBtns.forEach(function(btn){
-        btn.addEventListener("click", function(){
-            gradeSelectionBtns[index].querySelector("span").textContent = btn.textContent;
-            /* Get grade and credit */
-            
-            let currentGradeBtn = gradeSelectionBtns[index];
-            let currentGradeTxt = gradeSelectionBtns[index].querySelector("span").textContent;
-            hideAllDropMenus();
-            setColorForSelectedGrade(currentGradeBtn, currentGradeTxt);
-
-            let grade = btn.textContent;
-            let creditVal = parseInt(creditValues[index].textContent);
-
-            calTotCreditForEachGrade(grade, creditVal, index);
-            calGPA();
-
+        grades.forEach(function(grade){
+            let gradeEl = document.createElement("li");
+            let spanEl = document.createElement("span");
+            spanEl.textContent = grade;
+            gradeEl.appendChild(spanEl);
+            item.appendChild(gradeEl);
         });
     });
-});
-
-// Reset button.......
-let ResetBtnEl = document.getElementById("reset-button");
-
-ResetBtnEl.addEventListener("click", function(){
-    gradeSelectionBtns.forEach(function(btn){
-        btn.querySelector("span").textContent = "grade 🥇";
-        btn.classList.remove("grade-selected-A");
-        btn.classList.remove("grade-selected-B");
-        btn.classList.remove("grade-selected-C");
-        btn.classList.remove("grade-selected-DE");
+    
+    /* toggle dropdown menu when click the button */
+    gradeSelectionBtns.forEach(function(btn, index){
+        btn.addEventListener("click", function(){
+    
+            if(btn.classList.contains("active")){
+                btn.classList.toggle("active");
+            }
+            else {
+                resetActive();
+                btn.classList.toggle("active");
+            }
+    
+            if(gradeLists[index].classList.contains("hidden")){
+                hideAllDropMenus();
+                gradeLists[index].classList.toggle("hidden");
+            } else {
+                gradeLists[index].classList.toggle("hidden");
+                /* !!!!!!!!!!!!!!!!!!!!!!!!!!! */
+                calTotCreditForEachGrade(defaultGrade, defaultCredit, index);
+                calGPA();
+                
+    
+                gradeSelectionBtns[index].querySelector("span").textContent = "grade 🥇";
+                gradeSelectionBtns[index].classList.remove("grade-selected-A");
+                gradeSelectionBtns[index].classList.remove("grade-selected-B");
+                gradeSelectionBtns[index].classList.remove("grade-selected-C");
+                gradeSelectionBtns[index].classList.remove("grade-selected-DE");
+                gradeSelectionBtns[index].classList.remove("active");
+            } 
+        });
     });
-    hideAllDropMenus();
-    resetActive();
-    resetArrays();
-    gpaValEl.textContent = "0.00";
-    totCreditEl.textContent = "00";
-    gpaSubTextEl.style.backgroundColor = "lightgray";
-    totCreditSubTextEl.style.backgroundColor = "lightgray";
-});
-
-// gpa calculations....
-
-let gpaValEl = document.getElementById("gpaVal");
-let totCreditEl = document.getElementById("totCredit");
-
-const length = 48;
-const defaultCredit = 0;
-const defaultGrade = "0";
-
-const creditArray = Array.from({length}, () => defaultCredit);
-const gradeArray = Array.from({length}, () => defaultGrade);
-
-function resetArrays(){
-    creditArray.forEach(function(credit, index){
-        creditArray[index] = defaultCredit;
+    
+    let creditValues = document.querySelectorAll(".credit-val .value");
+    
+    /* display selected grade in dropdown menu text */
+    gradeLists.forEach(function(item, index){
+        let gradeBtns = item.querySelectorAll(".grade-list li");
+        gradeBtns.forEach(function(btn){
+            btn.addEventListener("click", function(){
+                gradeSelectionBtns[index].querySelector("span").textContent = btn.textContent;
+                /* Get grade and credit */
+                
+                let currentGradeBtn = gradeSelectionBtns[index];
+                let currentGradeTxt = gradeSelectionBtns[index].querySelector("span").textContent;
+                hideAllDropMenus();
+                setColorForSelectedGrade(currentGradeBtn, currentGradeTxt);
+    
+                let grade = btn.textContent;
+                let creditVal = parseInt(creditValues[index].textContent);
+    
+                calTotCreditForEachGrade(grade, creditVal, index);
+                calGPA();
+    
+            });
+        });
     });
-    gradeArray.forEach(function(grade, index){
-        gradeArray[index] = defaultGrade;
+    
+    // Reset button.......
+    let ResetBtnEl = document.getElementById("reset-button");
+    
+    ResetBtnEl.addEventListener("click", function(){
+        gradeSelectionBtns.forEach(function(btn){
+            btn.querySelector("span").textContent = "grade 🥇";
+            btn.classList.remove("grade-selected-A");
+            btn.classList.remove("grade-selected-B");
+            btn.classList.remove("grade-selected-C");
+            btn.classList.remove("grade-selected-DE");
+        });
+        hideAllDropMenus();
+        resetActive();
+        resetArrays();
+        gpaValEl.textContent = "0.00";
+        totCreditEl.textContent = "00";
+        gpaSubTextEl.style.backgroundColor = "lightgray";
+        totCreditSubTextEl.style.backgroundColor = "lightgray";
     });
-}
-
-let gpaSubTextEl = document.querySelector("#gpa-container .sub-text");
-let totCreditSubTextEl = document.querySelector("#total-credit-container .sub-text");
-
-function setGpaAndCreditColor(gpa, totCredit){
-    if(gpa >= 3.7){
-        gpaSubTextEl.style.backgroundColor = "#30f54a";
-    } else if(gpa >= 3.3) {
-        gpaSubTextEl.style.backgroundColor = "#8cf77e";
-    } else if(gpa >= 3.0) {
-        gpaSubTextEl.style.backgroundColor = "#c1f85b";
-    } else if(gpa >= 2.0) {
-        gpaSubTextEl.style.backgroundColor = "#f8c15b";
-    } else if(gpa > 0.0) {
-        gpaSubTextEl.style.backgroundColor = "#f53737";
-    }else {
-        if(totCredit > 0){
+    
+    // gpa calculations....
+    
+    let gpaValEl = document.getElementById("gpaVal");
+    let totCreditEl = document.getElementById("totCredit");
+    
+    const length = 48;
+    const defaultCredit = 0;
+    const defaultGrade = "0";
+    
+    const creditArray = Array.from({length}, () => defaultCredit);
+    const gradeArray = Array.from({length}, () => defaultGrade);
+    
+    function resetArrays(){
+        creditArray.forEach(function(credit, index){
+            creditArray[index] = defaultCredit;
+        });
+        gradeArray.forEach(function(grade, index){
+            gradeArray[index] = defaultGrade;
+        });
+    }
+    
+    let gpaSubTextEl = document.querySelector("#gpa-container .sub-text");
+    let totCreditSubTextEl = document.querySelector("#total-credit-container .sub-text");
+    
+    function setGpaAndCreditColor(gpa, totCredit){
+        if(gpa >= 3.7){
+            gpaSubTextEl.style.backgroundColor = "#30f54a";
+        } else if(gpa >= 3.3) {
+            gpaSubTextEl.style.backgroundColor = "#8cf77e";
+        } else if(gpa >= 3.0) {
+            gpaSubTextEl.style.backgroundColor = "#c1f85b";
+        } else if(gpa >= 2.0) {
+            gpaSubTextEl.style.backgroundColor = "#f8c15b";
+        } else if(gpa > 0.0) {
             gpaSubTextEl.style.backgroundColor = "#f53737";
         }else {
-            gpaSubTextEl.style.backgroundColor = "lightgray";
-        }  
-    }
-
-    if(totCredit === 0){
-        totCreditSubTextEl.style.backgroundColor = "lightgray";
-    } else if(totCredit < 30){
-        totCreditSubTextEl.style.backgroundColor = "#f8c15b";
-    } else if(totCredit < 60){
-        totCreditSubTextEl.style.backgroundColor = "#c1f85b";
-    } else if(totCredit < 90){
-        totCreditSubTextEl.style.backgroundColor = "#8cf77e";
-    } else if(totCredit <= 120){
-        totCreditSubTextEl.style.backgroundColor = "#30f54a";
-    }
-}
-
-function calTotCreditForEachGrade(grade, crediVal, index){
-    if(index >= 0 && index < 48){
-        gradeArray[index] = grade;
-        creditArray[index] = crediVal;
-    }else {
-        console.log("something wrong with calTotCreditForEachGrade(grade, crediVal, index) arguments!");
-        console.log("index value is exceeded the maximum length of arrays");
-    }
-}
-
-
-function calGPA(){
-    let A_PlusGPV = 0;
-    let A_GPV = 0;
-    let A_MinusGPV = 0;
-    let B_PlusGPV = 0;
-    let B_GPV = 0;
-    let B_MinusGPV = 0;
-    let C_PlusGPV = 0;
-    let C_GPV = 0;
-    let C_MinusGPV = 0;
-    let D_PlusGPV = 0;
-    let D_GPV = 0;
-    let E_GPV = 0;
-    let totalGPV = 0;
-    let totalCredits = 0;
-    let finalGPA = 0;
-    gradeArray.forEach(function(grade, index){
-        switch(grade){
-            case "A+" : 
-                A_PlusGPV += (4.00 * creditArray[index]);
-                totalCredits += creditArray[index];
-                break;
-            case "A" : 
-                A_GPV += (4.00 * creditArray[index]);
-                totalCredits += creditArray[index];
-                break;
-            case "A-" : 
-                A_MinusGPV += (3.70 * creditArray[index]);
-                totalCredits += creditArray[index];
-                break;
-            case "B+" : 
-                B_PlusGPV += (3.30 * creditArray[index]);
-                totalCredits += creditArray[index];
-                break;
-            case "B" : 
-                B_GPV += (3.00 * creditArray[index]);
-                totalCredits += creditArray[index];
-                break;
-            case "B-" : 
-                B_MinusGPV += (2.70 * creditArray[index]);
-                totalCredits += creditArray[index];
-                break; 
-            case "C+" : 
-                C_PlusGPV += (2.30 * creditArray[index]);
-                totalCredits += creditArray[index];
-                break;
-            case "C" : 
-                C_GPV += (2.00 * creditArray[index]);
-                totalCredits += creditArray[index];
-                break;
-            case "C-" : 
-                C_MinusGPV += (1.70 * creditArray[index]);
-                totalCredits += creditArray[index];
-                break; 
-            case "D+" : 
-                D_PlusGPV += (1.30 * creditArray[index]);
-                totalCredits += creditArray[index];
-                break;
-            case "D" : 
-                D_GPV += (1.00 * creditArray[index]);
-                totalCredits += creditArray[index];
-                break;
-            case "E" : 
-                E_GPV += (0.00 * creditArray[index]);
-                totalCredits += creditArray[index];
-                break;
-               
+            if(totCredit > 0){
+                gpaSubTextEl.style.backgroundColor = "#f53737";
+            }else {
+                gpaSubTextEl.style.backgroundColor = "lightgray";
+            }  
         }
-    });
-    totalGPV = (A_PlusGPV + A_GPV + A_MinusGPV + B_PlusGPV + B_GPV + B_MinusGPV + C_PlusGPV + C_GPV + C_MinusGPV + D_PlusGPV + D_GPV + E_GPV).toFixed(3);
     
-    if(totalCredits === 0){
-        finalGPA = "0.00";
-    } else{
-        finalGPA = (totalGPV / totalCredits).toFixed(2);
+        if(totCredit === 0){
+            totCreditSubTextEl.style.backgroundColor = "lightgray";
+        } else if(totCredit < 30){
+            totCreditSubTextEl.style.backgroundColor = "#f8c15b";
+        } else if(totCredit < 60){
+            totCreditSubTextEl.style.backgroundColor = "#c1f85b";
+        } else if(totCredit < 90){
+            totCreditSubTextEl.style.backgroundColor = "#8cf77e";
+        } else if(totCredit <= 120){
+            totCreditSubTextEl.style.backgroundColor = "#30f54a";
+        }
     }
     
-    gpaValEl.textContent = finalGPA;
-    totCreditEl.textContent = totalCredits;
-    setGpaAndCreditColor(finalGPA, totalCredits);
+    function calTotCreditForEachGrade(grade, crediVal, index){
+        if(index >= 0 && index < 48){
+            gradeArray[index] = grade;
+            creditArray[index] = crediVal;
+        }else {
+            console.log("something wrong with calTotCreditForEachGrade(grade, crediVal, index) arguments!");
+            console.log("index value is exceeded the maximum length of arrays");
+        }
+    }
     
-}
+    
+    function calGPA(){
+        let A_PlusGPV = 0;
+        let A_GPV = 0;
+        let A_MinusGPV = 0;
+        let B_PlusGPV = 0;
+        let B_GPV = 0;
+        let B_MinusGPV = 0;
+        let C_PlusGPV = 0;
+        let C_GPV = 0;
+        let C_MinusGPV = 0;
+        let D_PlusGPV = 0;
+        let D_GPV = 0;
+        let E_GPV = 0;
+        let totalGPV = 0;
+        let totalCredits = 0;
+        let finalGPA = 0;
+        gradeArray.forEach(function(grade, index){
+            switch(grade){
+                case "A+" : 
+                    A_PlusGPV += (4.00 * creditArray[index]);
+                    totalCredits += creditArray[index];
+                    break;
+                case "A" : 
+                    A_GPV += (4.00 * creditArray[index]);
+                    totalCredits += creditArray[index];
+                    break;
+                case "A-" : 
+                    A_MinusGPV += (3.70 * creditArray[index]);
+                    totalCredits += creditArray[index];
+                    break;
+                case "B+" : 
+                    B_PlusGPV += (3.30 * creditArray[index]);
+                    totalCredits += creditArray[index];
+                    break;
+                case "B" : 
+                    B_GPV += (3.00 * creditArray[index]);
+                    totalCredits += creditArray[index];
+                    break;
+                case "B-" : 
+                    B_MinusGPV += (2.70 * creditArray[index]);
+                    totalCredits += creditArray[index];
+                    break; 
+                case "C+" : 
+                    C_PlusGPV += (2.30 * creditArray[index]);
+                    totalCredits += creditArray[index];
+                    break;
+                case "C" : 
+                    C_GPV += (2.00 * creditArray[index]);
+                    totalCredits += creditArray[index];
+                    break;
+                case "C-" : 
+                    C_MinusGPV += (1.70 * creditArray[index]);
+                    totalCredits += creditArray[index];
+                    break; 
+                case "D+" : 
+                    D_PlusGPV += (1.30 * creditArray[index]);
+                    totalCredits += creditArray[index];
+                    break;
+                case "D" : 
+                    D_GPV += (1.00 * creditArray[index]);
+                    totalCredits += creditArray[index];
+                    break;
+                case "E" : 
+                    E_GPV += (0.00 * creditArray[index]);
+                    totalCredits += creditArray[index];
+                    break;
+                   
+            }
+        });
+        totalGPV = (A_PlusGPV + A_GPV + A_MinusGPV + B_PlusGPV + B_GPV + B_MinusGPV + C_PlusGPV + C_GPV + C_MinusGPV + D_PlusGPV + D_GPV + E_GPV).toFixed(3);
+        
+        if(totalCredits === 0){
+            finalGPA = "0.00";
+        } else{
+            finalGPA = (totalGPV / totalCredits).toFixed(2);
+        }
+        
+        gpaValEl.textContent = finalGPA;
+        totCreditEl.textContent = totalCredits;
+        setGpaAndCreditColor(finalGPA, totalCredits);
+        
+    }
+
+});
+
+document.dispatchEvent(new Event('coursesAdded'));
+
+
 
 
 

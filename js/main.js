@@ -63,12 +63,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 }
             });
         }else {
-           /* tab.style.borderLleft = "1px solid silver";
-            tab.style.borderRight = "1px solid silver";
-            let dropMenuEls = tab.querySelectorAll(".drop-menu li");
-            dropMenuEls.forEach(function(el){
-                el.style.border = "1px solid silver";
-            });*/
+           
         }
     });
 });
