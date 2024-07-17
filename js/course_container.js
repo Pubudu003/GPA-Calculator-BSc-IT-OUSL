@@ -48,9 +48,7 @@ function createCourseContainer(courseArr, courseCont){
 document.addEventListener('coursesAdded', function(){
 
     createCourseContainer(level3_semester1, l3s1_container);
-    console.log("Course containers are created");
+    document.dispatchEvent(new Event('courseCreated'));
 });
 
-document.dispatchEvent(new Event('courseCreated'));
-console.log("course created event triggered");
 

@@ -114,13 +114,7 @@ addCourse("ISU6302", "Social Media and Global Computing", 3, 6, 2);
 addCourse("ISU6305", "IT Project Management", 3, 6, 2);
 // Total courses = 48
 
-console.log("before course containers created");
-document.dispatchEvent(new Event('coursesAdded'));
-console.log("after course containers created");
-
 document.addEventListener('courseCreated', function(){
-
-    console.log("after course created event");
 
     let courseContainers = document.querySelectorAll(".course-container");
     let gradeSelectionBtns = document.querySelectorAll(".grade-selection-btn");
@@ -442,6 +436,8 @@ document.addEventListener('courseCreated', function(){
     }
 
 });
+
+document.dispatchEvent(new Event('coursesAdded'));
 
 
 
