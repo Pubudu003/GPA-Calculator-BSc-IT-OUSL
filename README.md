@@ -1,6 +1,6 @@
 # GPA Calculator for BSc IT - Open University of Sri Lanka
 
-This GPA Calculator is a simple tool designed to help students calculate their Grade Point Average (GPA) based on their course grades. It's intended for students pursuing a Bachelor of Science in Information Technology degree at the Open University of Sri Lanka.
+This GPA Calculator is a simple tool designed to help students calculate their Grade Point Average (GPA) based on their course grades. It's intended for students pursuing the Bachelor of Science in Information Technology degree at the Open University of Sri Lanka.
 
 ## Features
 
